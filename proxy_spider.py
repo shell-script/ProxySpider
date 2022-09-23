@@ -82,36 +82,36 @@ def proxy_handler(client, message):
         print("Find link: %s" % i)
         if checkit(i):
             if not (message.chat.username is None):
-                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.id)), parse_mode="html")
             else:
-                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.id)), parse_mode="html")
     for i in socks_auth.findall(message.text):
         print("Find link: %s" % i)
         if checkit_socks_auth(i):
             if not (message.chat.username is None):
-                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.id)), parse_mode="html")
             else:
-                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.id)), parse_mode="html")
     for i in socks.findall(message.text):
         print("Find link: %s" % i)
         if checkit_socks(i):
             if not (message.chat.username is None):
-                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.id)), parse_mode="html")
             else:
-                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.id)), parse_mode="html")
     for i in vmess.findall(message.text):
         print("Find link: %s" % i)
         if checkit_vmess(i):
             if not (message.chat.username is None):
-                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.id)), parse_mode="html")
             else:
-                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, '<code>%s</code>\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.id)), parse_mode="html")
     for i in mtp.findall(message.text):
         print("Find link: %s" % i)
         c = i + "&se"
         if check_ip(GetMiddleStr(c,"server=","&port="),int(float(GetMiddleStr(c,"&port=","&se")))):
             if not (message.chat.username is None):
-                bot.send_message(where_to_send, 'https://t.me/proxy?%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/proxy?%s\n\nForward from: @%s | Message ID: %s' % (i, str(message.chat.username), str(message.id)), parse_mode="html")
             else:
-                bot.send_message(where_to_send, 'https://t.me/proxy?%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.message_id)), parse_mode="html")
+                bot.send_message(where_to_send, 'https://t.me/proxy?%s\n\nForward from: %s | Message ID: %s' % (i, str(message.chat.id), str(message.id)), parse_mode="html")
 app.run()
